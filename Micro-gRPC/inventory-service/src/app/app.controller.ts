@@ -12,7 +12,7 @@ export class AppController {
     const qty = item[data.productId] || 0;
     return {
       availableQuantity: qty,
-      isStock: qty > 0,
+      inStock: qty > 0,
     };
   }
 }

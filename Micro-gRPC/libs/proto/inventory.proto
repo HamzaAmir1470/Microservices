@@ -1,0 +1,16 @@
+syntax = "proto3"; // 1. Fixed typo: "protp3" -> "proto3"
+
+package inventory;
+
+service InventoryService {
+    rpc CheckStock (StockRequest) returns (StockResponse);
+}
+
+message StockRequest {
+    string productId = 1;
+}
+
+message StockResponse {
+    int32 availableQuantity = 1;
+    bool inStock = 2; // 2. Added missing semicolon at the end of line 13
+}

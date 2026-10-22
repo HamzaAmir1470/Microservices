@@ -1,4 +1,5 @@
 import { Injectable } from '@nestjs/common';
+<<<<<<< HEAD
 import Consul from 'consul';
 
 @Injectable()
@@ -11,5 +12,12 @@ export class AppService {
     if (!paymentInfo) {
       throw new Error('Payment service not found');
     }
+=======
+
+@Injectable()
+export class AppService {
+  getData(): { message: string } {
+    return { message: 'Hello API' };
+>>>>>>> 2bef82bcf68b380a6aff2c0900ac70a628d56e75
   }
 }

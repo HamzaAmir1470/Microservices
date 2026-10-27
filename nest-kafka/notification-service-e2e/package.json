@@ -1,0 +1,25 @@
+{
+  "name": "@org/notification-service-e2e",
+  "version": "0.0.1",
+  "private": true,
+  "nx": {
+    "implicitDependencies": [
+      "@org/notification-service"
+    ],
+    "targets": {
+      "e2e": {
+        "command": "jest --passWithNoTests",
+        "options": {
+          "cwd": "notification-service-e2e"
+        },
+        "outputs": [
+          "{projectRoot}/test-output/jest/coverage"
+        ],
+        "dependsOn": [
+          "@org/notification-service:build",
+          "@org/notification-service:serve"
+        ]
+      }
+    }
+  }
+}

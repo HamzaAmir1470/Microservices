@@ -1,0 +1,25 @@
+{
+  "name": "@org/api-gateway-e2e",
+  "version": "0.0.1",
+  "private": true,
+  "nx": {
+    "implicitDependencies": [
+      "@org/api-gateway"
+    ],
+    "targets": {
+      "e2e": {
+        "command": "jest --passWithNoTests",
+        "options": {
+          "cwd": "api-gateway-e2e"
+        },
+        "outputs": [
+          "{projectRoot}/test-output/jest/coverage"
+        ],
+        "dependsOn": [
+          "@org/api-gateway:build",
+          "@org/api-gateway:serve"
+        ]
+      }
+    }
+  }
+}
